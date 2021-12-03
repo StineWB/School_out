@@ -25,8 +25,10 @@ namespace Gamekit2D
         {
             if (m_CanExecuteButtons)
             {
+                /*
                 if (OnButtonPress.GetPersistentEventCount() > 0 && PlayerInput.Instance.Interact.Down)
                     OnButtonPress.Invoke();
+                */
             }
         }
     }

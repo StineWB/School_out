@@ -79,11 +79,13 @@ namespace Gamekit2D
                 return;
 
             if (transitionWhen == TransitionWhen.InteractPressed)
-            {
+            {/*
+
                 if (PlayerInput.Instance.Interact.Down)
                 {
                     TransitionInternal ();
                 }
+                */
             }
         }
 

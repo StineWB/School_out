@@ -179,15 +179,15 @@ namespace Gamekit2D
 
         void Update()
         {
-            if (PlayerInput.Instance.Pause.Down)
+            if (GetComponent<PlayerInput>().Pause.Down)
             {
                 if (!m_InPause)
                 {
                     if (ScreenFader.IsFading)
                         return;
 
-                    PlayerInput.Instance.ReleaseControl(false);
-                    PlayerInput.Instance.Pause.GainControl();
+                    GetComponent<PlayerInput>().ReleaseControl(false);
+                    GetComponent<PlayerInput>().Pause.GainControl();
                     m_InPause = true;
                     Time.timeScale = 0;
                     UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("UIMenus", UnityEngine.SceneManagement.LoadSceneMode.Additive);
@@ -221,7 +221,7 @@ namespace Gamekit2D
         {
             Time.timeScale = 1;
             UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync("UIMenus");
-            PlayerInput.Instance.GainControl();
+            GetComponent<PlayerInput>().GainControl();
             //we have to wait for a fixed update so the pause button state change, otherwise we can get in case were the update
             //of this script happen BEFORE the input is updated, leading to setting the game in pause once again
             yield return new WaitForFixedUpdate();
@@ -259,7 +259,7 @@ namespace Gamekit2D
                 newLocalPosX = Mathf.Lerp(cameraFollowTarget.localPosition.x, desiredLocalPosX, m_CamFollowHorizontalSpeed * Time.deltaTime);
 
             bool moveVertically = false;
-            if (!Mathf.Approximately(PlayerInput.Instance.Vertical.Value, 0f))
+            if (!Mathf.Approximately(GetComponent<PlayerInput>().Vertical.Value, 0f))
             {
                 m_VerticalCameraOffsetTimer += Time.deltaTime;
 
@@ -274,7 +274,7 @@ namespace Gamekit2D
 
             if (moveVertically)
             {
-                float desiredLocalPosY = PlayerInput.Instance.Vertical.Value * cameraVerticalInputOffset;
+                float desiredLocalPosY = GetComponent<PlayerInput>().Vertical.Value * cameraVerticalInputOffset;
                 if (Mathf.Approximately(m_CamFollowVerticalSpeed, 0f))
                     newLocalPosY = desiredLocalPosY;
                 else
@@ -300,7 +300,7 @@ namespace Gamekit2D
 
         protected IEnumerator Shoot()
         {
-            while (PlayerInput.Instance.RangedAttack.Held)
+            while (GetComponent<PlayerInput>().RangedAttack.Held)
             {
                 if (Time.time >= m_NextShotTime)
                 {
@@ -386,8 +386,8 @@ namespace Gamekit2D
 
         public void UpdateFacing()
         {
-            bool faceLeft = PlayerInput.Instance.Horizontal.Value < 0f;
-            bool faceRight = PlayerInput.Instance.Horizontal.Value > 0f;
+            bool faceLeft = GetComponent<PlayerInput>().Horizontal.Value < 0f;
+            bool faceRight = GetComponent<PlayerInput>().Horizontal.Value > 0f;
 
             if (faceLeft)
             {
@@ -422,14 +422,14 @@ namespace Gamekit2D
 
         public void GroundedHorizontalMovement(bool useInput, float speedScale = 1f)
         {
-            float desiredSpeed = useInput ? PlayerInput.Instance.Horizontal.Value * maxSpeed * speedScale : 0f;
-            float acceleration = useInput && PlayerInput.Instance.Horizontal.ReceivingInput ? groundAcceleration : groundDeceleration;
+            float desiredSpeed = useInput ? GetComponent<PlayerInput>().Horizontal.Value * maxSpeed * speedScale : 0f;
+            float acceleration = useInput && GetComponent<PlayerInput>().Horizontal.ReceivingInput ? groundAcceleration : groundDeceleration;
             m_MoveVector.x = Mathf.MoveTowards(m_MoveVector.x, desiredSpeed, acceleration * Time.deltaTime);
         }
 
         public void CheckForCrouching()
         {
-            m_Animator.SetBool(m_HashCrouchingPara, PlayerInput.Instance.Vertical.Value < 0f);
+            m_Animator.SetBool(m_HashCrouchingPara, GetComponent<PlayerInput>().Vertical.Value < 0f);
         }
 
         public bool CheckForGrounded()
@@ -480,8 +480,8 @@ namespace Gamekit2D
 
             if (m_CurrentPushables.Count > 0)
             {
-                bool movingRight = PlayerInput.Instance.Horizontal.Value > float.Epsilon;
-                bool movingLeft = PlayerInput.Instance.Horizontal.Value < -float.Epsilon;
+                bool movingRight = GetComponent<PlayerInput>().Horizontal.Value > float.Epsilon;
+                bool movingLeft = GetComponent<PlayerInput>().Horizontal.Value < -float.Epsilon;
 
                 for (int i = 0; i < m_CurrentPushables.Count; i++)
                 {
@@ -532,7 +532,7 @@ namespace Gamekit2D
 
         public void UpdateJump()
         {
-            if (!PlayerInput.Instance.Jump.Held && m_MoveVector.y > 0.0f)
+            if (!GetComponent<PlayerInput>().Jump.Held && m_MoveVector.y > 0.0f)
             {
                 m_MoveVector.y -= jumpAbortSpeedReduction * Time.deltaTime;
             }
@@ -540,11 +540,11 @@ namespace Gamekit2D
 
         public void AirborneHorizontalMovement()
         {
-            float desiredSpeed = PlayerInput.Instance.Horizontal.Value * maxSpeed;
+            float desiredSpeed = GetComponent<PlayerInput>().Horizontal.Value * maxSpeed;
 
             float acceleration;
 
-            if (PlayerInput.Instance.Horizontal.ReceivingInput)
+            if (GetComponent<PlayerInput>().Horizontal.ReceivingInput)
                 acceleration = groundAcceleration * airborneAccelProportion;
             else
                 acceleration = groundDeceleration * airborneDecelProportion;
@@ -563,12 +563,12 @@ namespace Gamekit2D
 
         public bool CheckForJumpInput()
         {
-            return PlayerInput.Instance.Jump.Down;
+            return GetComponent<PlayerInput>().Jump.Down;
         }
 
         public bool CheckForFallInput()
         {
-            return PlayerInput.Instance.Vertical.Value < -float.Epsilon && PlayerInput.Instance.Jump.Down;
+            return GetComponent<PlayerInput>().Vertical.Value < -float.Epsilon && GetComponent<PlayerInput>().Jump.Down;
         }
 
         public bool MakePlatformFallthrough()
@@ -619,7 +619,7 @@ namespace Gamekit2D
         {
             bool holdingGun = false;
 
-            if (PlayerInput.Instance.RangedAttack.Held)
+            if (GetComponent<PlayerInput>().RangedAttack.Held)
             {
                 holdingGun = true;
                 m_Animator.SetBool(m_HashHoldingGunPara, true);
@@ -640,13 +640,13 @@ namespace Gamekit2D
 
         public void CheckAndFireGun()
         {
-            if (PlayerInput.Instance.RangedAttack.Held && m_Animator.GetBool(m_HashHoldingGunPara))
+            if (GetComponent<PlayerInput>().RangedAttack.Held && m_Animator.GetBool(m_HashHoldingGunPara))
             {
                 if (m_ShootingCoroutine == null)
                     m_ShootingCoroutine = StartCoroutine(Shoot());
             }
 
-            if ((PlayerInput.Instance.RangedAttack.Up || !m_Animator.GetBool(m_HashHoldingGunPara)) && m_ShootingCoroutine != null)
+            if ((GetComponent<PlayerInput>().RangedAttack.Up || !m_Animator.GetBool(m_HashHoldingGunPara)) && m_ShootingCoroutine != null)
             {
                 StopCoroutine(m_ShootingCoroutine);
                 m_ShootingCoroutine = null;
@@ -683,7 +683,7 @@ namespace Gamekit2D
         public void OnHurt(Damager damager, Damageable damageable)
         {
             //if the player don't have control, we shouldn't be able to be hurt as this wouldn't be fair
-            if (!PlayerInput.Instance.HaveControl)
+            if (!GetComponent<PlayerInput>().HaveControl)
                 return;
 
             UpdateFacing(damageable.GetDamageDirection().x > 0f);
@@ -714,7 +714,7 @@ namespace Gamekit2D
 
         IEnumerator DieRespawnCoroutine(bool resetHealth, bool useCheckPoint)
         {
-            PlayerInput.Instance.ReleaseControl(true);
+            GetComponent<PlayerInput>().ReleaseControl(true);
             yield return new WaitForSeconds(1.0f); //wait one second before respawing
             yield return StartCoroutine(ScreenFader.FadeSceneOut(useCheckPoint ? ScreenFader.FadeType.Black : ScreenFader.FadeType.GameOver));
             if(!useCheckPoint)
@@ -722,7 +722,7 @@ namespace Gamekit2D
             Respawn(resetHealth, useCheckPoint);
             yield return new WaitForEndOfFrame();
             yield return StartCoroutine(ScreenFader.FadeSceneIn());
-            PlayerInput.Instance.GainControl();
+            GetComponent<PlayerInput>().GainControl();
         }
 
         public void StartFlickering()
@@ -738,7 +738,7 @@ namespace Gamekit2D
 
         public bool CheckForMeleeAttackInput()
         {
-            return PlayerInput.Instance.MeleeAttack.Down;
+            return GetComponent<PlayerInput>().MeleeAttack.Down;
         }
 
         public void MeleeAttack()
