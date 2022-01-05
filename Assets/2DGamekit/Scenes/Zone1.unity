@@ -10001,6 +10001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatformlong
       objectReference: {fileID: 0}
+    - target: {fileID: 1549168127534472, guid: 75c2b6a66ee2dfe4b9f818176a33f456, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4958767343812900, guid: 75c2b6a66ee2dfe4b9f818176a33f456, type: 3}
       propertyPath: m_RootOrder
       value: 10
