@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: e04f1d67fbd82874b887d4c35f7e86cd
+guid: 6fe7b988112ace14ea11dacafab18adc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6944245750967690396
-    second: Please_0
+      213: -1844081381481952666
+    second: Loeb_2_0
   - first:
-      213: 5651022855747064950
-    second: Please_1
+      213: -8181928143001415941
+    second: Loeb_2_1
   - first:
-      213: 933025055498155656
-    second: Please_2
+      213: -3147158423727138728
+    second: Loeb_2_2
   - first:
-      213: -3470646921553079596
-    second: Please_3
+      213: 8173900191597586834
+    second: Loeb_2_3
   - first:
-      213: -6447980578986301700
-    second: Please_4
+      213: 727720780583620142
+    second: Loeb_2_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Please_0
+      name: Loeb_2_0
       rect:
         serializedVersion: 2
-        x: 692
-        y: 4518
-        width: 1022
-        height: 4217
+        x: 690
+        y: 2637
+        width: 952
+        height: 3694
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,20 +120,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c94e173e7baee5060800000000000000
-      internalID: 6944245750967690396
+      spriteID: 66a4bdff0c18866e0800000000000000
+      internalID: -1844081381481952666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Please_1
+      name: Loeb_2_1
       rect:
         serializedVersion: 2
-        x: 2487
-        y: 4518
-        width: 1037
-        height: 4216
+        x: 2489
+        y: 2637
+        width: 1021
+        height: 3693
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 674da6ec8577c6e40800000000000000
-      internalID: 5651022855747064950
+      spriteID: bfe01a224b3f37e80800000000000000
+      internalID: -8181928143001415941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Please_2
+      name: Loeb_2_2
       rect:
         serializedVersion: 2
-        x: 6224
-        y: 4524
-        width: 1065
-        height: 4211
+        x: 4441
+        y: 2637
+        width: 1024
+        height: 3693
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,50 +162,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 886b1873855c2fc00800000000000000
-      internalID: 933025055498155656
+      spriteID: 8589dd5861c0354d0800000000000000
+      internalID: -3147158423727138728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Please_3
+      name: Loeb_2_3
       rect:
         serializedVersion: 2
-        x: 4428
-        y: 4520
-        width: 1060
-        height: 4229
+        x: 6246
+        y: 2637
+        width: 936
+        height: 3693
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d2960c5309c5dfc0800000000000000
-      internalID: -3470646921553079596
+      spriteID: 299eba5cae68f6170800000000000000
+      internalID: 8173900191597586834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Please_4
+      name: Loeb_2_4
       rect:
         serializedVersion: 2
-        x: 7956
-        y: 4517
-        width: 1099
-        height: 4190
+        x: 7949
+        y: 2637
+        width: 1173
+        height: 3693
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf667e683db2486a0800000000000000
-      internalID: -6447980578986301700
+      spriteID: e2e4b5eb132691a00800000000000000
+      internalID: 727720780583620142
       vertices: []
       indices: 
       edges: []
