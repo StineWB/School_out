@@ -4,8 +4,7 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -13,7 +12,7 @@ MonoBehaviour:
   m_Name: TilesetRockRules
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 21300130, guid: 6e1db66fc7e57884380659e0a55351f0, type: 3}
-  m_DefaultColliderType: 0
+  m_DefaultColliderType: 1
   m_TilingRules:
   - m_Neighbors: 0000000002000000000000000100000001000000000000000200000000000000
     m_Sprites:
