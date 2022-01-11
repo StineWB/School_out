@@ -2094,7 +2094,7 @@ GameObject:
   - component: {fileID: 607547582}
   - component: {fileID: 607547584}
   - component: {fileID: 607547583}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: "D\xF8r\xE5bner collider"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2129,7 +2129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8192
   OnEnter:
     m_PersistentCalls:
       m_Calls:
@@ -2152,18 +2152,6 @@ MonoBehaviour:
   OnButtonPress:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1149045463}
-        m_TargetAssemblyTypeName: Gamekit2D.InventoryItem, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Gamekit2D.InventoryItem, Assembly-CSharp
         m_MethodName: Save
@@ -2211,11 +2199,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1019614092003180, guid: d3dff3eb072b76f4daa75549e62b7bda, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1502367281944090, guid: d3dff3eb072b76f4daa75549e62b7bda, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1656790952191946, guid: d3dff3eb072b76f4daa75549e62b7bda, type: 3}
       propertyPath: m_Name
@@ -2223,19 +2211,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1656790952191946, guid: d3dff3eb072b76f4daa75549e62b7bda, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1747429326985522, guid: d3dff3eb072b76f4daa75549e62b7bda, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1756093100490058, guid: d3dff3eb072b76f4daa75549e62b7bda, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1789484290083064, guid: d3dff3eb072b76f4daa75549e62b7bda, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4107532682250152, guid: d3dff3eb072b76f4daa75549e62b7bda, type: 3}
       propertyPath: m_LocalScale.y
@@ -16915,7 +16903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   OnEnter:
     m_PersistentCalls:
       m_Calls:
