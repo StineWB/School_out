@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 327952297}
   - component: {fileID: 327952299}
   - component: {fileID: 327952298}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3395,7 +3395,7 @@ GameObject:
   - component: {fileID: 1149045464}
   - component: {fileID: 1149045463}
   - component: {fileID: 1149045462}
-  m_Layer: 13
+  m_Layer: 11
   m_Name: Key (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18108,11 +18108,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1026257897535202, guid: 5a4dedcc0d105f34da4eed8c2a3f3f67, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1613638484000758, guid: 5a4dedcc0d105f34da4eed8c2a3f3f67, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1613638484000758, guid: 5a4dedcc0d105f34da4eed8c2a3f3f67, type: 3}
       propertyPath: m_IsActive
@@ -18120,7 +18120,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1982535594873098, guid: 5a4dedcc0d105f34da4eed8c2a3f3f67, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4607298957376116, guid: 5a4dedcc0d105f34da4eed8c2a3f3f67, type: 3}
       propertyPath: m_RootOrder
