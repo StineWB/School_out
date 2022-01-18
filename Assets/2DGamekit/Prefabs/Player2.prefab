@@ -351,7 +351,7 @@ MonoBehaviour:
     controllerButton: 10
     m_Enabled: 0
   Jump:
-    key: 108
+    key: 273
     controllerButton: 1
     m_Enabled: 1
   Horizontal:
@@ -359,8 +359,8 @@ MonoBehaviour:
     negative: 276
     controllerAxis: 1
   Vertical:
-    positive: 119
-    negative: 115
+    positive: 0
+    negative: 0
     controllerAxis: 2
   dataSettings:
     dataTag: PlayerInput
